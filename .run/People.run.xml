@@ -1,0 +1,9 @@
+<component name="ProjectRunConfigurationManager">
+  <configuration default="false" name="People" type="Application" factoryName="Application">
+    <option name="MAIN_CLASS_NAME" value="People" />
+    <module name="one_line_to_json" />
+    <method v="2">
+      <option name="Make" enabled="true" />
+    </method>
+  </configuration>
+</component>
