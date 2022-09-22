@@ -11,7 +11,7 @@ object People extends App {
 
   showCsv()
 
-//  showJson()
+  //  showJson()
 
   spark.stop();
 
@@ -29,10 +29,12 @@ object People extends App {
     println("Original CSV ---- ")
     dfCsv.show()
 
-    dfCsv.printSchema()
+    //    dfCsv.printSchema()
 
     // method 1 direct DF filtering
-    println("JSON string=" + dfCsv.where("age > 31").toJSON.head())
+    //    println("JSON string=" + dfCsv.toJSON.toString())
+    val length: Int = dfCsv.count().toInt
+    println("JSON string=" + dfCsv.toJSON.take(length).mkString(","))
 
     // method 2 sql with table
     dfCsv.createGlobalTempView("people")
